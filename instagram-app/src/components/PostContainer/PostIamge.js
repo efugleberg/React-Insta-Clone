@@ -1,5 +1,7 @@
 import React from 'react';
-// import CommentSection from '../CommentSection/CommentSection';
+import CommentSection from '../CommentSection/CommentSection';
+
+import './PostIamge.css';
 
 const PostImage = props => {
     return (
@@ -17,7 +19,7 @@ const PostImage = props => {
         <div>
     <img className='post-image' src={props.item.imageUrl} alt='photos' />
     </div>
-    {/* <CommentSection item={props.item}/> */}
+    <CommentSection singleComment={props.item.comments}/>
     </div>
     )
 }

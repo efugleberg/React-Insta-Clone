@@ -1,5 +1,6 @@
 import React from 'react';
 import PostImage from './PostIamge';
+import './PostContainer.css';
 // import CommentSection from './CommentSection';
 
 
@@ -7,13 +8,10 @@ import PostImage from './PostIamge';
 const PostContainer = props => {
     console.log('props', props);
     return (
-        <div>
+        <div className='post-container9'>
             {props.taskData.map(item => (
                 <div key={item.id} className='post-container11'>
                 < PostImage item={item}/>
-                {/* <div> */}
-                {/* < CommentSection item={item} /> */}
-                {/* </div> */}
                 </div>
                  ))}
 

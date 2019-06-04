@@ -20,7 +20,7 @@ class App extends React.Component {
         <SearchBar searches={this.state.dummyData} />
       </div>
       <div className='post-container'>
-      <PostContainer taskData={this.state.taskData} />
+        <PostContainer taskData={this.state.taskData} />
       </div>
     </div>
     );
