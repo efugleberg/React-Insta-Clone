@@ -19,7 +19,9 @@ const PostImage = props => {
         <div>
     <img className='post-image' src={props.item.imageUrl} alt='photos' />
     </div>
-    <CommentSection singleComment={props.item.comments}/>
+    <CommentSection 
+    likes={props.item.likes}
+    singleComment={props.item.comments}/>
     </div>
     )
 }

@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
         this.state = {
             singleComment: props.singleComment,
             input: '',
-            likes: ''
+            likes: props.likes
         }
     }
 
@@ -21,6 +21,7 @@ class CommentSection extends React.Component {
 
 
     render () {
+        
         return (
             <div className='comment-container'>
                 <div className='emoticons'>
@@ -29,7 +30,8 @@ class CommentSection extends React.Component {
                     
                 </div>
             <div className='likes'>
-            <p>{this.likes} likes</p>
+            <p>{this.state.likes} likes</p>
+            
             </div>
             <div>
                 {this.state.singleComment.map((comment, key) => (<Comments commentComment={comment} key={key}/>))}
