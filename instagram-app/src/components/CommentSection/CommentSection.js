@@ -1,6 +1,8 @@
 import React from 'react';
 import Comments from './Comments';
 
+import './CommentSection.css';
+
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
@@ -20,8 +22,13 @@ class CommentSection extends React.Component {
 
     render () {
         return (
-            <div>
-            <div>
+            <div className='comment-container'>
+                <div className='emoticons'>
+                <i className="far fa-heart"></i>
+                <i className="far fa-comment"></i>
+                    
+                </div>
+            <div className='likes'>
             <p>{this.likes} likes</p>
             </div>
             <div>

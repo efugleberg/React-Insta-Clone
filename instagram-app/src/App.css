@@ -34,4 +34,5 @@
 
 .post-container {
   border: 1 px solid grey;
+  display: flex;
 }

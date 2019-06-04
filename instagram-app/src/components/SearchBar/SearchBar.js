@@ -6,6 +6,7 @@ const SearchBar = props => {
     return (
         <div className='search-bar-container'>
             <div className='left-box'>
+            <i className="fas fa-camera"></i>
 
             </div>
 
