@@ -1,9 +1,23 @@
 import React from 'react';
+// import CommentSection from '../CommentSection/CommentSection';
 
 const PostImage = props => {
     return (
         <div>
+        <div className="header-wrapper">
+        <div className='post-header'>
+            <div>
+            <img className='thumbnail-image' src={props.item.thumbnailUrl} alt='thumbnail'/>
+            </div>
+            <div>
+            {props.item.username}
+            </div>
+        </div>
+        </div>
+        <div>
     <img className='post-image' src={props.item.imageUrl} alt='photos' />
+    </div>
+    {/* <CommentSection item={props.item}/> */}
     </div>
     )
 }

@@ -9,13 +9,13 @@ const PostContainer = props => {
     return (
         <div>
             {props.taskData.map(item => (
-                <div className='post-container11'>
-                < PostImage key={item.imageUrl} item={item}/>
+                <div key={item.id} className='post-container11'>
+                < PostImage item={item}/>
+                {/* <div> */}
+                {/* < CommentSection item={item} /> */}
+                {/* </div> */}
                 </div>
-
-                    // <PostImage key={item.timestamp} imageUrl={item.imageUrl} />
-                    
-                    ))}
+                 ))}
 
         </div>
     )
