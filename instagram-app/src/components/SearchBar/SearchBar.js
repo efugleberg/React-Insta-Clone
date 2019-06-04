@@ -15,7 +15,8 @@ const SearchBar = props => {
                 <input
                 name=''
                 type='text'
-                placeholder='Search' />
+                placeholder='    Search'
+                onKeyDown={props.userSearch}  />
 
             </div>
 
