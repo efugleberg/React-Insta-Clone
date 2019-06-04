@@ -8,19 +8,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      taskData: dummyData
+      posts: dummyData
     }
   }
 
   render() {
-    console.log(this.state.taskData)
+    console.log(this.state.posts)
   return (
     <div className="App">
       <div className='search-bar'>
         <SearchBar searches={this.state.dummyData} />
       </div>
       <div className='post-container'>
-        <PostContainer taskData={this.state.taskData} />
+        <PostContainer posts={this.state.posts} />
       </div>
     </div>
     );

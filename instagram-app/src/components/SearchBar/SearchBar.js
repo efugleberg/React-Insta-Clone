@@ -7,6 +7,7 @@ const SearchBar = props => {
         <div className='search-bar-container'>
             <div className='left-box'>
             <i className="fas fa-camera"></i>
+            <p>Instagram</p>
 
             </div>
 
@@ -19,6 +20,9 @@ const SearchBar = props => {
             </div>
 
             <div className='right-box'>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user"></i>
 
 
             </div>

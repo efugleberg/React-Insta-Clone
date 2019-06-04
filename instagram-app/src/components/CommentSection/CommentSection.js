@@ -30,7 +30,7 @@ class CommentSection extends React.Component {
                     
                 </div>
             <div className='likes'>
-            <p>{this.state.likes} likes</p>
+            <p><strong>{this.state.likes} likes</strong></p>
             
             </div>
             <div>

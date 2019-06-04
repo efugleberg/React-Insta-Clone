@@ -11,8 +11,8 @@ const PostImage = props => {
             <div>
             <img className='thumbnail-image' src={props.item.thumbnailUrl} alt='thumbnail'/>
             </div>
-            <div>
-            {props.item.username}
+            <div> <strong>
+            {props.item.username}</strong>
             </div>
         </div>
         </div>

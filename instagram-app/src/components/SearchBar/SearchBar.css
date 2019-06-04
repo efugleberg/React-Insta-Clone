@@ -3,4 +3,11 @@
     flex-direction: row;
     justify-content: space-between;
     width: 640px;
+    align-items: baseline;
+}
+
+.left-box {
+    display: flex;
+    align-items: center;
+    font-family: cursive;
 }

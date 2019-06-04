@@ -1,5 +1,9 @@
 .header-wrapper {
     display: flex;
+    height: 80px;
+}
+.thumbnail-image {
+    height: 40px;
 }
 
 .post-header {
