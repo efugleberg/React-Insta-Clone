@@ -11,7 +11,8 @@ const PostContainer = props => {
         <div className='post-container8'>
             {props.posts.map(item => (
                 <div key={item.id} className='post-container11'>
-                < PostImage item={item}/>
+                < PostImage item={item}
+                />
                 </div>
                  ))}
 

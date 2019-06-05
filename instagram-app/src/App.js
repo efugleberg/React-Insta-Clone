@@ -23,8 +23,8 @@ class App extends React.Component {
     const posts = this.state.posts.filter((user) => {
       if (user.username.includes(e.target.value)) {
         return user;
-      } return '';
-    })
+        } return '';
+      })
     this.setState({filteredPosts: posts})
   }
 
@@ -33,11 +33,13 @@ class App extends React.Component {
   return (
     <div className="App">
       <div className='search-bar'>
-        <SearchBar userSearch={this.userSearch} />
+        <SearchBar 
+          userSearch={this.userSearch} />
       </div>
       <div className='post-container'>
-        <PostContainer posts={this.state.filteredPosts.length > 0 ?
-        this.state.filteredPosts :
+        <PostContainer 
+          posts={this.state.filteredPosts.length > 0 ?
+          this.state.filteredPosts :
           this.state.posts} />
       </div>
     </div>

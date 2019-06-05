@@ -33,39 +33,34 @@ class CommentSection extends React.Component {
     }
 
 
-
-    render () {
-        
+    render () { 
         return (
             <div className='comment-container'>
                 <div className='emoticons'>
                     <button onClick={this.addLikes}>
-                <i className="far fa-heart"></i>
-                </button>
-                <i className="far fa-comment"></i>
-                    
+                    <i className="far fa-heart"></i>
+                    </button>
+                    <i className="far fa-comment"></i>    
                 </div>
+
             <div className='likes'>
-            <p><strong>{this.state.likes} likes</strong></p>
-            
+                <p><strong>{this.state.likes} likes</strong></p>
             </div>
+
             <div>
                 {this.state.singleComment.map((comment, key) => (<Comments commentComment={comment} key={key}/>))}
             </div>
 
             <div>
                 <InsertComment
-                handleChanges={this.handleChanges}
-                addNewComment={this.addNewComment}
-                singleComment={this.state.singleComment}
-                insertComment={this.state.insertComment} />
-
+                    handleChanges={this.handleChanges}
+                    addNewComment={this.addNewComment}
+                    singleComment={this.state.singleComment}
+                    insertComment={this.state.insertComment} 
+                    />
             </div>
 
-            
-
-
-            </div>
+            </div>  //Comment Container
 
 
 

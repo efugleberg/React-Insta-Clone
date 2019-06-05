@@ -6,30 +6,27 @@ const SearchBar = props => {
     return (
         <div className='search-bar-container'>
             <div className='left-box'>
-            <i className="fas fa-camera"></i>
-            <p>Instagram</p>
-
+                <i className="fas fa-camera"></i>
+                <p>Instagram</p>
             </div>
 
             <div className='middle-box'>
                 <input
-                name=''
-                type='text'
-                placeholder='    Search'
-                onChange={props.userSearch}  />
-
+                    name=''
+                    type='text'
+                    placeholder='    Search'
+                    onChange={props.userSearch}  
+                />
             </div>
 
             <div className='right-box'>
-            <i className="far fa-compass"></i>
-            <i className="far fa-heart"></i>
-            <i className="far fa-user"></i>
-
-
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
             </div>
 
 
-        </div>
+        </div>  //Search-bar-container
 
     )
 }
