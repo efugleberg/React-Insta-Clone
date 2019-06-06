@@ -1,43 +1,47 @@
 import React from 'react';
 
 class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={
-            loggedIn: false
+    state= {
+        loggedIn: false,
+        username: '',
+        password: ''
         }
-    }
+    
 
     login = e => {
-        e.preventDefault();
-        if (localStorage.getItem('loggedIn')) {
-            localStorage.removeItem('loggedIn');
-            this.setState({ 
-                loggedIn: true
-            })
-        } else {
-            localStorage.setItem('loggedIn', true);
-            this.setState({
-                loggedIn: true
-            })
-        }
+        const username = this.state.username;
+        const password = this.state.password;
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        this.setState({ loggedIn: true});
         window.location.reload();
     }
+
+    handleChanges = e => this.setState({ [e.target.name]: e.target.value })
 
     render() {
         return (
             <div>
-                <form>
-                <input
-                placeholder='name'
-                username=''
-                />
-                <input
-                placeholder='password'
-                password=''
-                />
-                
-                <button onSubmit={this.login}>Login</button>
+                <form onSubmit={this.props.signIn}>
+                    <input
+                    name='username'
+                    placeholder='name'
+                    username='username'
+                    type='text'
+                    value={this.state.username}
+                    onChange={this.handleChanges}
+                    />
+
+                    <input
+                    name='password'
+                    placeholder='password'
+                    password='password'
+                    type='text'
+                    value={this.state.password}
+                    onChange={this.handleChanges}
+                    />
+                    
+                    <button>Login</button>
                 </form>
             </div>
 
