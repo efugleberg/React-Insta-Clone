@@ -1,8 +1,16 @@
 import React from 'react';
 import Comments from './Comments';
+import styled from 'styled-components';
 
-import './CommentSection.css';
 import InsertComment from './InsertComment';
+
+const Wrapper = styled.section`
+    display: inline;
+    text-align: start;`
+
+// const CommentBar = styled.div`
+//     width: 100%;`
+    
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -35,7 +43,7 @@ class CommentSection extends React.Component {
 
     render () { 
         return (
-            <div className='comment-container'>
+            <Wrapper>
                 <div className='emoticons'>
                     <button onClick={this.addLikes}>
                     <i className="far fa-heart"></i>
@@ -60,7 +68,7 @@ class CommentSection extends React.Component {
                     />
             </div>
 
-            </div>  //Comment Container
+            </Wrapper>  //Comment Container
 
 
 
