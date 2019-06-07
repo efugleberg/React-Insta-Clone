@@ -1,0 +1,16 @@
+.header-wrapper {
+    display: flex;
+    height: 80px;
+}
+.thumbnail-image {
+    height: 40px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.thumbnail-image {
+    border-radius: 50%;
+}
