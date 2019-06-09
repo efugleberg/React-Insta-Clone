@@ -8,7 +8,6 @@ import withAuthenticate from './components/authentication/withAuthenticate';
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login);
 
 class App extends React.Component {
-  
 
   render() {
     // console.log(this.state.posts)

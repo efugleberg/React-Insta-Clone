@@ -3,10 +3,22 @@ import React from 'react';
 
 const withAuthenticate = PostsPage => Login =>
     class extends React.Component {
-        state = {
+        constructor(props) {
+            super(props);
+            this.state = {
             loggedIn: false,
             usernameText: '',
             passwordText: ''
+        }
+    }
+        componentDidMount() {
+            this.setState({
+                loggedIn : false,
+            });
+        }
+
+        handleChanges = e => {
+            this.setState({[e.target.name]: e.target.value})
         }
 
         username = e => {
@@ -18,10 +30,9 @@ const withAuthenticate = PostsPage => Login =>
 
         signIn = e => {
             e.preventDefault();
-            localStorage.setItem('username', this.state.usernameText);
-            localStorage.setItem('password', this.state.passwordText);
-            localStorage.setItem('loggedIn', true)
-            this.setState({ loggedIn: true})
+            localStorage.setItem('username', 'jerry');
+            localStorage.setItem('password', 'seinfeld');
+            this.setState({ loggedIn: true, })
         }
 
         
@@ -30,8 +41,8 @@ const withAuthenticate = PostsPage => Login =>
                 return <PostsPage />;
                 } else {
                 return <Login 
-                    username={this.props.username}
-                    password={this.props.password}
+                    username={this.state.usernameText}
+                    password={this.state.passwordText}
                     signIn={this.signIn}
                     />;
                     }
